@@ -1,0 +1,619 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+
+/*header start*/
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #EEEDE7;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    left: 0;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar.active {
+    right: 0px;
+    margin-top: 0px;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.5s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: rgb(16, 49, 107);
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: rgb(16, 49, 107);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#navbar li .education:hover::after {
+    content: "";
+    width: 40%;
+    height: 2px;
+    background-color: rgb(16, 49, 107);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#mobile {
+    display: none;
+    align-items: center;
+}
+
+#close {
+    display: none;
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+}
+
+#hero .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 90px;
+    padding-left: 450px;
+}
+
+#hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    font-weight: 600;
+    color: rgb(16, 49, 107);
+    border-bottom: 1px solid #DFDFDE;
+}
+
+#hero .text h2 {
+    position: relative;
+    font: size 36px;
+    font-weight: 600;
+    margin-top: 0;
+    color: #343a40;
+}
+
+#hero .text h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid grey;
+    animation: typing 2.5s steps(12) infinite;
+    background: white;
+}
+
+@keyframes typing {
+    60%,
+    40% {
+        left: calc(100%);
+        margin: 0 0 0 2px;
+    }
+}
+
+#hero .text .btns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#hero .text .resume {
+    background-color: white;
+    border: 2px solid rgb(16, 49, 107);
+    color: rgb(16, 49, 107);
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+#hero .text .resume:hover {
+    color: black;
+}
+
+#hero .text .contactme {
+    background-color: rgb(16, 49, 107);
+    border: 2px solid rgb(16, 49, 107);
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+#hero .text .contactme:hover {
+    background-color: white;
+    color: black;
+    transition: 0.8s ease;
+}
+
+.heroimg {
+    padding-top: 50px;
+    padding-right: 300px;
+}
+
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(16, 49, 107);
+    flex-direction: column;
+    padding-right: 200px;
+    padding-left: 200px;
+    line-height: 2;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#about h1,
+p {
+    color: white;
+}
+
+#about p {
+    margin-top: 0;
+    padding-bottom: 5px;
+}
+
+#education {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#education .edu {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 200px;
+}
+
+#education .edu .graduation,
+.intermediate,
+.school {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EEEDE7;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.06);
+    width: 250px;
+    border-radius: 10px;
+    height: 250px;
+    color: rgb(16, 49, 107);
+    line-height: 1.5;
+}
+
+#education .edu .graduation h3,
+.intermediate h3,
+.school h3 {
+    border-bottom: 1px solid rgb(16, 49, 107);
+}
+
+#education .edu .graduation:hover,
+.intermediate:hover,
+.school:hover {
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+#education .edu .graduation p,
+.school p,
+.intermediate p {
+    color: black;
+    margin-top: 0;
+    font-size: 15px;
+}
+
+#works {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: ;
+    text-align: center;
+}
+
+#works .websites {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 220px;
+}
+
+#works .websites .website1,
+.website2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#works .websites .website1 a,
+.website2 a {
+    text-decoration: none;
+    font-size: medium;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    padding: 8px 16px;
+    transition: 1.5s ease;
+}
+
+#works .websites .website1 a:hover,
+.website2 a:hover {
+    background-color: white;
+    color: black;
+}
+
+#logodesigned {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#logodesigned .logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 25px 300px;
+}
+
+#logodesigned .logos .valuehomes:hover,
+.mb:hover,
+.mrbean:hover {
+    border-bottom: 1px solid rgb(16, 49, 107);
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(16, 49, 107);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: white;
+}
+
+#contact .details {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+#mailform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+#mailform form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+form input,
+form textarea {
+    padding: 12px;
+    margin-top: 5px;
+    font-size: medium;
+}
+
+#mailform button {
+    padding: 10px 25px;
+    background-color: #1F75FE;
+    color: white;
+    border: 0px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 1.5s ease;
+}
+
+#mailform button:hover {
+    background-color: white;
+    border: 1px solid #1F75FE;
+    color: #1a1a1a;
+}
+
+#thankyou {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 65px;
+}
+
+#thankyou .text {
+    background-color: rgb(16, 49, 107);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 300px;
+    border-radius: 65px;
+    box-shadow: 3px 3px rgb(185, 185, 185);
+}
+
+
+/*media queries*/
+
+@media (max-width:799px) {
+    body {
+        overflow-x: hidden;
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+    }
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 25vh;
+        width: 100px;
+        background-color: #E3E6F3;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.02);
+        padding: 20px;
+        padding-top: 30px;
+        border-radius: 5px;
+    }
+    #navbar li {
+        margin-bottom: 15px;
+    }
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+    #mobile i {
+        color: #1a1a1a;
+        font-size: 22px;
+        padding-left: 20px;
+    }
+    #hero {
+        align-items: center;
+        flex-direction: column;
+    }
+    #hero .text {
+        font-size: smaller;
+        padding-top: 90px;
+        padding-left: 0px;
+    }
+    .heroimg {
+        padding-top: 50px;
+        padding-right: 0px;
+    }
+    #about {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    #works .websites {
+        flex-direction: column;
+        padding-top: 35px;
+        padding-bottom: 35px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #works .websites .website2 {
+        margin-top: 20px;
+    }
+    #logodesigned .logos .valuehomes:hover,
+    .mb:hover,
+    .mrbean:hover {
+        border: none;
+    }
+    #logodesigned .logos {
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #education {
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 15px;
+    }
+    #education .edu {
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    #education .edu .graduation,
+    .intermediate,
+    .school {
+        margin-top: 15px;
+    }
+    #thankyou .text {
+        width: 400px;
+        height: 200px;
+    }
+    #close {
+        display: initial;
+        position: absolute;
+        top: 12px;
+        left: 20px;
+        color: black;
+        font-size: 15px;
+    }
+}
+
+@media (max-width:477px) {
+    body {
+        overflow-x: hidden;
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+    }
+    #header {
+        padding: 20px 40px;
+    }
+    #header .logo {
+        height: 45px;
+    }
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 25vh;
+        width: 100px;
+        background-color: #E3E6F3;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.02);
+        padding: 20px 0px 0px 0px;
+        padding-top: 30px;
+        border-radius: 5px;
+    }
+    #hero .text {
+        font-size: smaller;
+        padding-top: 70px;
+    }
+    #hero .text h1 {
+        font-size: 32px;
+    }
+    #hero .text .btns {
+        font-size: smaller;
+    }
+    .heroimg {
+        height: 300px;
+        padding-top: 40px;
+    }
+    #about {
+        padding-right: 20px;
+        padding-left: 20px;
+        line-height: 2;
+        font-size: smaller;
+    }
+    #education {
+        font-size: smaller;
+        padding-left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #education .edu .graduation,
+    .intermediate,
+    .school {
+        width: 250px;
+        height: 200px;
+    }
+    #education .edu .graduation p,
+    .school p,
+    .intermediate p {
+        font-size: 12px;
+    }
+    #works {
+        display: flex;
+        font-size: smaller;
+    }
+    #works .websites {
+        display: flex;
+        align-items: center;
+        padding: 20px 0px;
+    }
+    #works .websites .website1 .counsel,
+    .website2 .hubspot {
+        height: 120px;
+    }
+    #works .websites .website1 a,
+    .website2 a {
+        font-size: smaller;
+        margin-top: 10px;
+        padding: 8px 16px;
+    }
+    #logodesigned {
+        font-size: smaller;
+    }
+    #logodesigned .logos .logo1,
+    .logo2,
+    .logo3 {
+        height: 150px;
+    }
+    #contact {
+        font-size: smaller;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        color: white;
+    }
+    #contact .details {
+        font-size: smaller;
+    }
+    #header #mobile #bar {
+        font-size: smaller;
+    }
+    #thankyou .text {
+        width: 400px;
+        height: 200px;
+    }
+    #close {
+        display: initial;
+        color: black;
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        font-size: 15px;
+    }
+    #close:hover {
+        color: rgb(16, 49, 107);
+    }
+}
